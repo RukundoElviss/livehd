@@ -1,12 +1,12 @@
 import React from 'react'
-import './TitleCards.css'
+import './Trending.css'
 
-const TitleCards = () => {
+const Trending = () => {
   return (
-    <div className="titlecards">
-
+    <div className="trending">
+      
     </div>
   )
 }
 
-export default TitleCards
+export default Trending
