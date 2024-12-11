@@ -60,7 +60,7 @@ const MovieList = () => {
             />
             <h2>{movie.title}</h2>
             <p>{movie.release_date}</p>
-            <button onClick={() => fetchTrailer(movie.id)}>Watch Trailer</button>
+            <button className="btn btn-danger" onClick={() => fetchTrailer(movie.id)}>Watch Trailer</button>
           </div>
         ))}
       </div>
