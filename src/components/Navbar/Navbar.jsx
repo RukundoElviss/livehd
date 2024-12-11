@@ -31,8 +31,8 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-center" href="">
-                <i className="fas fa-star"></i> Popular
+              <a className="nav-link text-center" href="#trending">
+                <i className="fas fa-star"></i> Trending
               </a>
             </li>
           </ul>
