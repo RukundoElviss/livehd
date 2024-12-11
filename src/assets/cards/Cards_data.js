@@ -8,10 +8,6 @@ import card_img7 from './card7.jpg';
 import card_img8 from './card8.jpg';
 import card_img9 from './card9.jpg';
 import card_img10 from './card10.jpg';
-import card_img11 from './card11.jpg';
-import card_img12 from './card12.jpg';
-import card_img13 from './card13.jpg';
-import card_img14 from './card14.jpg';
 
 const cards_data = [
     {
