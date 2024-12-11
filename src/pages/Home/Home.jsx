@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
+import MovieList from "../MovieList/MovieList";
 import heroImg from '../../assets/hero-banner.png';
 import cards_data from '../../assets/cards/Cards_data';
 
@@ -43,29 +45,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container mt-5" id="trending">
-        <h1 className="mb-4 text-center text-md-start">Trending Movies</h1>
-        <div className="row">
-          {cards_data.map((card, index) => (
-            <div key={index} className="col-lg-3 col-2 col-12 mb-4">
-              <div className="card">
-                <img src={card.image} className="card-img-top img-fluid" alt={card.name} />
-                <div className="card-img-overlay">
-                  <h3 className="movie-title">{card.name}</h3>
-                  <p className="lead">{card.description}</p>
-                  <div className="overlay-btns">
-                    <a href="#" className="btn btn-danger me-2">
-                      <i className="fas fa-play"></i> Play
-                    </a>
-                    <a href="#" className="btn btn-dark">
-                      <i className="fas fa-info-circle"></i> More Info
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="movies" id="movies">
+        <MovieList/>
       </div>
     </section>
   );
