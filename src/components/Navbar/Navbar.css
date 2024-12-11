@@ -1,0 +1,90 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    color: #fff;
+    width: 100%;
+}
+
+.navbar img {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.nav-item .nav-link {
+    color: #fff;
+}
+
+#sm-down .nav-item .nav-link:hover {
+    color: #ff0000;
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#sm-down .nav-item .nav-link{
+    padding: 10px 20px 0px 20px;
+}
+
+#nav-item i {
+    font-size: 25px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    width: max-content;
+    background-color: #111111;
+    padding: 10px;
+    z-index: 1;
+    display: none;
+    color: #fff;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-menu p i {
+    font-size: 12px;
+    padding: 0px 5px;
+    color: #fff;
+}
+
+.dropdown-menu p i:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    color: #ff0000;
+}
+
+#dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-item:hover {
+    color: #fff;
+    background-color: #ff0000;
+}
+
+@media screen and (max-width:768px) {
+    #sm-down {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10000;
+        position: fixed;
+        background-color: #000;
+        border-top: 1px solid #333;
+        justify-content: space-between;
+    }
+}
