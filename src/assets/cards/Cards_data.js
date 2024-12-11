@@ -2,53 +2,27 @@ import card_img1 from './card1.jpg';
 import card_img2 from './card2.jpg';
 import card_img3 from './card3.jpg';
 import card_img4 from './card4.jpg';
-import card_img5 from './card5.jpg';
-import card_img6 from './card6.jpg';
-import card_img7 from './card7.jpg';
-import card_img8 from './card8.jpg';
-import card_img9 from './card9.jpg';
-import card_img10 from './card10.jpg';
 
 const cards_data = [
     {
-        image:card_img1,
-        name:"Moana 2"
+        image: card_img1,
+        name: "Moana 2",
+        description: "After receiving an unexpected call from her wayfinding ancestors, Moana must journey to Oceania into dangerous waters, unlike anything she's ever faced."
     },
     {
-        image:card_img2,
-        name:"Wicked"
+        image: card_img2,
+        name: "Y2K",
+        description: "Two high school nobodies make the decision to crash the last major celebration before the new millennium on New Year's Eve 1999. The night becomes crazy."
     },
     {
-        image:card_img3,
-        name:"Gladiator"
+        image: card_img3,
+        name: "Gladiator",
+        description: "After his home is conquered by the tyrannical emperors who now lead Rome, Lucius must enter the Colosseum and find strength to return the glory of Rome."
     },
     {
-        image:card_img4,
-        name:"Push Pa 2"
-    },
-    {
-        image:card_img5,
-        name:"Red One"
-    },
-    {
-        image:card_img6,
-        name:"Interstellar"
-    },
-    {
-        image:card_img7,
-        name:"Solo Levelling: Re Awakening"
-    },
-    {
-        image:card_img8,
-        name:"Drummer Boy"
-    },
-    {
-        image:card_img9,
-        name:"Y2K"
-    },
-    {
-        image:card_img10,
-        name:"The Best Christmas Paegent Ever"
+        image: card_img4,
+        name: "Red One",
+        description: "After Santa Claus is kidnapped, the North Pole's Head of Security must team up with a notorious hacker in a globe-trotting, action-packed mission to save Christmas."
     }
 ]
 
