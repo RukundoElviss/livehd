@@ -42,7 +42,8 @@
     }
 
     .hero-img {
-        display: none;
+        width: 100%;
+        height: auto;
     }
 
     .text-overlay {
