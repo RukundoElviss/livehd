@@ -18,7 +18,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-7 py-3 position-relative">
+          <div className="col-md-7 py-3 position-relative" id='hero-image'>
             <img src={heroImg} alt="" className="hero-img w-100" />
             <div className="text-overlay">
               <h3 className="movie-title">DON'T MOVE</h3>
