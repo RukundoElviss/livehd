@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import './MovieList.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./MovieList.css";
 import axios from "axios";
 
 const MovieList = () => {
@@ -49,18 +50,29 @@ const MovieList = () => {
   };
 
   return (
-    <div className="movie-list">
-      <h1>Popular Movies</h1>
-      <div className="movies-grid">
+    <div className="movie-list container">
+      <h1 className="text-center my-4">Popular Movies</h1>
+      <div className="row gy-4">
         {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <h2>{movie.title}</h2>
-            <p>{movie.release_date}</p>
-            <button className="btn btn-danger" onClick={() => fetchTrailer(movie.id)}>Watch Trailer</button>
+          <div key={movie.id} className="col-6 col-md-4 col-lg-3">
+            <div className="movie-card card">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                className="card-img-top"
+                alt={movie.title}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{movie.title}</h5>
+                <p className="card-text">{movie.release_date}</p>
+                <p className="card-text">{movie.overview}</p> {/* Movie description */}
+                <button
+                  className="btn btn-danger"
+                  onClick={() => fetchTrailer(movie.id)}
+                >
+                  Watch Trailer
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -76,7 +88,7 @@ const MovieList = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <button onClick={() => setSelectedTrailer(null)}>Close</button>
+          <button className="btn btn-secondary mt-3" onClick={() => setSelectedTrailer(null)}>Close</button>
         </div>
       )}
     </div>
