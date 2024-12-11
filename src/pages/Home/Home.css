@@ -13,18 +13,16 @@
 }
 
 .hero-img {
-    width: 100%;
-    height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .text-overlay {
-    background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    left: 20px;
     color: white;
-    padding: 20px;
-    width: 100%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .movie-title {
@@ -63,4 +61,23 @@
     .movie-desc {
         font-size: 15px;
     }
+}
+
+.card {
+    border: none;
+}
+
+.card-img-overlay {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-btns .btn {
+    margin-right: 10px;
+}
+
+.card:hover .card-img-overlay {
+    display: block;
 }
