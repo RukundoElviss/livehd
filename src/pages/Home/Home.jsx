@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
-import heroImg from '../../assets/hero-banner.svg';
+import heroImg from '../../assets/hero-banner.png';
 
 const Home = () => {
   return (
