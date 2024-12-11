@@ -46,6 +46,10 @@
         height: auto;
     }
 
+    #hero-image {
+        display: none;
+    }
+
     .text-overlay {
         background-color: rgba(0, 0, 0, 0.1);
         position: absolute;
