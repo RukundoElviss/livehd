@@ -7,7 +7,7 @@ import heroImg from '../../assets/hero-banner.png';
 
 const Home = () => {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <Navbar />
       <div className="hero container-fluid">
         <div className="row align-items-center">
