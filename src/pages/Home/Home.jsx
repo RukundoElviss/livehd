@@ -4,7 +4,6 @@ import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
 import MovieList from "../MovieList/MovieList";
 import heroImg from '../../assets/hero-banner.png';
-import cards_data from '../../assets/cards/Cards_data';
 
 const Home = () => {
   return (
