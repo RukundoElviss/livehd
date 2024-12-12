@@ -29,8 +29,8 @@ const Home = () => {
           <div className="col-md-7 position-relative text-center">
             <img src={heroImg} alt="Hero Banner" className="hero-img img-fluid" />
             <div className="text-overlay">
-              <h3 className="movie-title">DON'T MOVE</h3>
-              <h5 className="movie-desc">
+              <h3 className="movie-title text-start">DON'T MOVE</h3>
+              <h5 className="movie-desc text-start">
                 When a killer injects her with a paralytic agent, a woman must run, fight, and hide before her body completely shuts down.
               </h5>
               <div className="hero-btns mt-3">
