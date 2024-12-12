@@ -57,62 +57,34 @@ const MovieList = () => {
       .join(", ");
   };
 
-  const chunkArray = (array, size) => {
-    const result = [];
-    for (let i = 0; i < array.length; i += size) {
-      result.push(array.slice(i, i + size));
-    }
-    return result;
-  };
-
-  const movieChunks = chunkArray(movies, 6);
-
   return (
     <div className="movie-list container-fluid">
       <h1 className="my-4" id="trending">Trending Movies</h1>
-      <div id="movieCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {movieChunks.map((chunk, chunkIndex) => (
-            <div
-              key={chunkIndex}
-              className={`carousel-item ${chunkIndex === 0 ? "active" : ""}`}
-            >
-              <div className="row">
-                {chunk.map((movie) => (
-                  <div key={movie.id} className="col-2 d-flex flex-column align-items-center">
-                    <div className="movie-card">
-                      <img
-                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                        alt={movie.title}
-                        className="img-fluid"
-                      />
-                      <span className="badge badge-dark">HD</span>
-                      <h6 className="text-center mt-2">{movie.title}</h6>
-                    </div>
-                  </div>
-                ))}
+      <div className="row gy-4">
+        {movies.map((movie) => (
+          <div key={movie.id} className="col-6 col-md-2">
+            <div className="movie-card card">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                className="card-img-top"
+                alt={movie.title}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{movie.title}</h5>
+                <p className="card-text">Year: {movie.release_date.split("-")[0]}</p>
+                <p className="card-text">Rating: {movie.vote_average.toFixed(1)} / 10</p>
+                <p className="card-text">Genres: {getGenreNames(movie.genre_ids)}</p>
+                <p className="card-text">Popularity: {movie.popularity.toFixed(0)}</p>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => fetchTrailer(movie.id)}
+                >
+                  Watch Trailer
+                </button>
               </div>
             </div>
-          ))}
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#movieCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#movieCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+          </div>
+        ))}
       </div>
 
       {selectedTrailer && (
