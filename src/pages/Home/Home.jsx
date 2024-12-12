@@ -3,6 +3,7 @@ import axios from "axios";
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
 import MovieList from "../MovieList/MovieList";
+import Movies from "../Movies/Movies";
 import heroImg from '../../assets/hero-banner.png';
 
 const Home = () => {
@@ -46,6 +47,7 @@ const Home = () => {
       </div>
       <div className="movies" id="movies">
         <MovieList/>
+        <Movies/>
       </div>
     </section>
   );
