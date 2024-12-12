@@ -21,7 +21,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-center" href="">
+              <a className="nav-link text-center" href="../../Movies">
                 <i className="fas fa-film"></i> Movies
               </a>
             </li>

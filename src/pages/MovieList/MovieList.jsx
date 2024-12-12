@@ -61,7 +61,7 @@ const MovieList = () => {
     <div className="movie-list container-fluid">
       <h1 className="my-4" id="trending">Trending Movies</h1>
       <div className="row gy-4">
-        {movies.slice(0, 12).map((movie) => ( // Show only the first 12 movies
+        {movies.slice(0, 12).map((movie) => (
           <div key={movie.id} className="col-6 col-md-2">
             <div className="movie-card card">
               <img

@@ -47,7 +47,6 @@ const Home = () => {
       </div>
       <div className="movies" id="movies">
         <MovieList/>
-        <Movies/>
       </div>
     </section>
   );

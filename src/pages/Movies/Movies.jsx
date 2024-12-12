@@ -74,6 +74,12 @@ const Movies = () => {
                 <p className="card-text">Year: {movie.release_date?.split("-")[0]}</p>
                 <p className="card-text">Rating: {movie.vote_average.toFixed(1)} / 10</p>
                 <p className="card-text">Genres: {getGenreNames(movie.genre_ids)}</p>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => fetchTrailer(movie.id)}
+                >
+                  Watch Trailer
+                </button>
               </div>
             </div>
           </div>
